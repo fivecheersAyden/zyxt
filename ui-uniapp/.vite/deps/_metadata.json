@@ -1,0 +1,13 @@
+{
+  "hash": "c33a7c5b",
+  "browserHash": "c110f963",
+  "optimized": {
+    "plus-websocket": {
+      "src": "../../node_modules/plus-websocket/out/index.js",
+      "file": "plus-websocket.js",
+      "fileHash": "a4e7e83f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}

@@ -1,0 +1,72 @@
+@keyframes letter-spaceing-ani{
+	0%{
+		opacity: 0;
+		letter-spacing: 20px;
+	}
+	20%{
+		opacity: 0;
+		letter-spacing: 20px;
+	}
+}
+@keyframes top-in-ani{
+	0%{
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	20%{
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+}
+@keyframes bottom-in-ani{
+	0%{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	20%{
+		opacity: 0;
+		transform: translateY(100%);
+	}
+}
+@keyframes left-in-ani{
+	0%{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	20%{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+}
+@keyframes right-in-ani{
+	0%{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	20%{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+@keyframes appear-ani {
+	0%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 0;
+	}
+}
+
+@keyframes text-ani {
+	0%{
+		letter-spacing: 40px;
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

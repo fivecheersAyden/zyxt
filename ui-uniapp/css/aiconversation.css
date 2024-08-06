@@ -1,0 +1,127 @@
+	.com-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
+	/*对话*/
+	.message-container{
+		flex: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: start;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	.message-self{
+		width: 100%;
+		height: auto;
+		margin-bottom: 8px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	.message-self .ai-head{
+		width: 36px;
+		height: 36px;
+		background-color: #4d80f0;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.message-self .ai-message{
+		max-width: calc(100% - 92px);
+		margin: 4px 8px;
+		color: #fff;
+		background-color: #fff;
+		color: #333;
+		padding: 8px;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		letter-spacing: 1px;
+		white-space: pre-line;
+	}
+	.message-self .usr-message{
+		max-width: calc(100% - 92px);
+		margin: 4px 8px;
+		color: #fff;
+		background-color: #4d80f0;
+		padding: 8px;
+		border-top-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		letter-spacing: 1px;
+		white-space: pre-line;
+	}
+	.message-self .usr-head{
+		width: 36px;
+		height: 36px;
+		background-color: #4d80f0;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	/*输入*/
+	.input-container{
+		max-height: 80px;
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		position: relative;
+	}
+	.input-container .input-inner{
+		color: black;
+		background-color: #eee;
+		max-height: 60px;
+		height: auto;
+		min-height: 24px;
+		padding: 8px 8px 4px 8px;
+		width: calc(100% - 76px);
+		margin-top: 16px;
+		border-radius: 4px;
+	}
+	.input-container .btn{
+		width: 48px;
+		height: 36px;
+		background-color: #4d80f0;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+
+	/* 底部 */
+	.example-prompt {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		animation: bottom-in-ani .8s 1;
+	}
+
+	.component {
+		/* background: linear-gradient(to right bottom, #1c3364, #19035b); */
+		background: linear-gradient(90deg, rgba(48,26,133,1) 0%, rgba(25,13,69,1) 100%);
+		width: calc(100%);
+		margin: 10px 0 0 0;
+		padding: 10px;
+		/* border: 1px solid #ccc; */
+		border-radius: 10px;
+	}
+
+	.example-title {
+		/* font-size: 18px; */
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	.example-self {
+		font-size: small;
+		color: #aaa;
+	}

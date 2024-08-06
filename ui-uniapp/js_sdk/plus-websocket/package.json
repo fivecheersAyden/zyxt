@@ -1,0 +1,16 @@
+{
+    "id": "plus-websocket",
+    "name": "plus-websocket",
+    "displayName": "plus-websocket",
+    "version": "1.0.7",
+    "description": "在 HTML5+ 和 WEB 环境使用小程序风格的 websocket 接口",
+    "keywords": [
+        "websocket"
+    ],
+    "dcloudext": {
+        "category": [
+            "JS SDK",
+            "通用 SDK"
+        ]
+    }
+}
