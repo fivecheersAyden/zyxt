@@ -1,11 +1,11 @@
 {
 	"easycom": {
-			"autoscan": true,
-			"custom": {
-			  "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
-			}
+		"autoscan": true,
+		"custom": {
+			"^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+		}
 	},
-		"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages	
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages	
 		{
 			"path": "pages/LoginPage/LoginPage",
 			"style": {
@@ -19,155 +19,160 @@
 			}
 		},
 		{
-			"path" : "pages/HistoryDialoguePage/HistoryDialoguePage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/HistoryDialoguePage/HistoryDialoguePage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/GrowPage/GrowPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/GrowPage/GrowPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/NewQuesPage/NewQuesPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/NewQuesPage/NewQuesPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/AIConsolidationPage/AIConsolidationPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/AIConsolidationPage/AIConsolidationPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/MinePage/MinePage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/MinePage/MinePage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/AIConsolidationPage/QuestionShowPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/AIConsolidationPage/QuestionShowPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/AIConsolidationPage/RedoDetailPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/AIConsolidationPage/RedoDetailPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/TestTTS/TestTTS",
-			"style" : {
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/TestTTS/TestTTS",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/HistoryDialagueDetail/HistoryDialagueDetail",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/HistoryDialagueDetail/HistoryDialagueDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/RecommandPage/RecommandPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/RecommandPage/RecommandPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/CustomAiPage/CustomAiPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/CustomAiPage/CustomAiPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/ReviewPage/ReviewPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/ReviewPage/ReviewPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/ReviewPage/ReviewDetail/ReviewDetail",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/ReviewPage/ReviewDetail/ReviewDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/NewQuesPage/SimilarHistory/SimilarHistory",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/NewQuesPage/SimilarHistory/SimilarHistory",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/RealTimeTalkingPage/RealTimeTalkingPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/RealTimeTalkingPage/RealTimeTalkingPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/RealTimeTalkingPage/RealTimeTalkingEntry",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false,
+			"path": "pages/RealTimeTalkingPage/RealTimeTalkingEntry",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		}
-		
 	],
+	"tabBar": {
+		"height": "0",
+		"list": [
+			{
+				"pagePath": "pages/QuesPageBefore/QuesPageBefore",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/HomePage/HomePage",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/GrowPage/GrowPage",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/MinePage/MinePage",
+				"text": ""
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
-		"app-plus":{
+		"app-plus": {
 			"bounce": "none",
 			"scrollIndicator": "none"
 		}

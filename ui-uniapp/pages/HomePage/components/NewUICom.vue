@@ -62,7 +62,7 @@
 					<div class="mode-btn" v-if="strMode" @click="changeStrMode">
 						<wd-icon name="more1" size="18px"></wd-icon>
 					</div>
-					<div @click="changeStrMode" :class="strMode? 'entry-hide' : 'entry'" style="background-color: #4d80f088; border: 1px solid transparent;">
+					<div @click="changeStrMode" :class="strMode? 'entry-hide' : 'entry'" style="background-color: #433f7f; border: 1px solid transparent;">
 						<wd-icon name="arrow-right" size="16px"></wd-icon>
 						<div>收起</div>
 					</div>
@@ -222,6 +222,7 @@ const getInnerAudioContext = (url) => {
 
 /*顶部*/
 .welcome {
+	color: white;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -259,6 +260,7 @@ const getInnerAudioContext = (url) => {
 	margin-right: 4px;
 }
 .cheer-container-str{
+	color: white;
 	height: calc(100% - 52px);
 	width: 100%;
 	transition: .6s;
@@ -271,7 +273,7 @@ const getInnerAudioContext = (url) => {
 }
 .cheer-container-str p{
 	font-size: 13px;
-	color: #666;
+	color: #a7a7a7;
 	letter-spacing: 1px;
 	transition: .6s;
 }
@@ -331,7 +333,7 @@ const getInnerAudioContext = (url) => {
 }
 .mode-btn{
 	width: 20px;
-	background-color: #4d80f088;
+	background-color: #433f7f;
 	border-radius: 12px;
 	box-shadow: 2px 2px 6px #00000022;
 	display: flex;
@@ -351,10 +353,10 @@ const getInnerAudioContext = (url) => {
 	height: 32px;
 	padding: 4px 0;
 	width: calc(32% - 12px);
-	background-color: #4d80f0dd;
+	background-color: #4942ad;
 	border-radius: 8px;
 	box-shadow: 2px 2px 6px #00000022;
-	border: 1px solid #6a75de;
+	border: 1px solid #6158e3;
 	transition: 1s;
 }
 .entry-hide{

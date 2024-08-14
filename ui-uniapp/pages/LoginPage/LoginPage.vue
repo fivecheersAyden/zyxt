@@ -82,7 +82,7 @@
 					<div class="card-bottom" @click="changeMode">返回登录</div>
 				</div>
 				<!--其他登陆方式-->
-				<wd-divider style="width: 100%; margin: 12px 0;">其他方式登录</wd-divider>
+				<wd-divider style="color:white; width: 100%; margin: 12px 0;">其他方式登录</wd-divider>
 				<div class="other-container">
 					<image @click="otherLogin(1)" mode="aspectFit" src="@/static/icon_QQ.png" alt="" />
 					<image @click="otherLogin(2)" mode="aspectFit" src="@/static/icon_weichat.png" alt="" />
@@ -210,7 +210,7 @@
 					console.log('自动登陆成功，token和userInfo如下')
 					console.log(globalProps.token)
 					console.log(globalProps.userInfo)
-					uni.redirectTo({
+					uni.switchTab({
 						url:"/pages/HomePage/HomePage"
 					})
 					uni.showToast({

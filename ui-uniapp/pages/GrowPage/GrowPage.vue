@@ -213,6 +213,10 @@ const frontendFormat = (backendData) => {
 @import "@/css/global.css";
 @import "@/css/animation.css";
 
+page{
+	color: white;
+}
+
 .growpage-container {
 	margin-top: 15px;
 	padding: 0 20px;

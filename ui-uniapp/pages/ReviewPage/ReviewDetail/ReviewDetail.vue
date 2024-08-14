@@ -261,7 +261,7 @@ const nextQues = ()=>{
 .ques-container{
 	height: 60%;
 	width: 100%;
-	background: linear-gradient(to top, #f6fbfe, #f1f5fd);
+	background: linear-gradient(to top, #1b1941, #2d2874);
 	border-top: #4d80f066 1px solid;
 	display: flex;
 	flex-direction: column;

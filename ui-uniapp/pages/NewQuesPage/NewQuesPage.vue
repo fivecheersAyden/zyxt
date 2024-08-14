@@ -253,7 +253,7 @@ const saveDialogue = ()=>{
 .ques-container{
 	height: 70%;
 	width: 100%;
-	background: linear-gradient(to top, #f6fbfe, #f1f5fd);
+	background: linear-gradient(to top, #1b1941, #2d2874);
 	border-top: #4d80f066 1px solid;
 	display: flex;
 	flex-direction: column;
@@ -268,7 +268,7 @@ const saveDialogue = ()=>{
 .ques-container-hide{
 	height: 24px;
 	width: 100%;
-	background-color: #4d80f0dd;
+	background-color: #4942ad;
 	transition: .6s;
 	display: flex;
 	flex-direction: column;
@@ -302,7 +302,7 @@ const saveDialogue = ()=>{
 .photo-container .photo-btn{
 	width: 72px;
 	height: 50px;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	display: flex;
 	align-items: center;
 	justify-content: center;

@@ -250,7 +250,7 @@
 		animation: top-in-ani .6s 1;
 	}
 	.body-content .select-container .time-select{
-		color: #333;
+		/* color: #333; */
 	}
 	.body-content .scroll-container{
 		margin: 8px;

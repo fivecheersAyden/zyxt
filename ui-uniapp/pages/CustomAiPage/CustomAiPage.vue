@@ -45,7 +45,7 @@
 										当前选择
 									</view>
 								</view>
-								<view style="font-size: 14px; color: #666;">{{ aiItem.characteristic }}</view>
+								<view style="font-size: 14px; color: #999;">{{ aiItem.characteristic }}</view>
 							</view>
 						</view>
 					</view>
@@ -185,7 +185,9 @@ const btnSure = ()=>{
 <style>
 @import url("@/css/global.css");
 @import url("@/css/animation.css");
-
+page{
+	color: white;
+}
 .custom-ai-container {
 	position: absolute;
 	display: flex;

@@ -503,7 +503,7 @@
 		height: 10px;
 	}
 	.ques-line{
-		color: #222;
+		/* color: #222; */
 		padding: 12px 4px;
 		white-space: pre-line;
 		word-break: break-all;
