@@ -12,7 +12,6 @@
 				<NewUICom class="absolute-all-container"/>
 			</view>
 		</view>
-		<div style="height:15px"></div>
 		<TabbarCom :tabbarIndex="0" class="tabbarpage-tabbar" />
 	</view>
 	

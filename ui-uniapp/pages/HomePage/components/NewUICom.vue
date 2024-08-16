@@ -48,10 +48,10 @@
 						<wd-icon name="service" size="16px"></wd-icon>
 						<div>口语听力</div>
 					</div>
-					<!--历史对话-->
+					<!--历史错题-->
 					<div @click="navHistory" :class="strMode? 'entry-hide' : 'entry'">
 						<wd-icon name="history" size="16px"></wd-icon>
-						<div>历史对话</div>
+						<div>历史错题</div>
 					</div>
 					<!--个人中心-->
 					<div @click="navMinePage" :class="strMode? 'entry-hide' : 'entry'">
@@ -119,12 +119,12 @@ const navNewQues = () => {
 	})
 }
 const navGrowPage = () => {
-	uni.navigateTo({
+	uni.switchTab({
 		url: '/pages/GrowPage/GrowPage'
 	})
 }
 const navHistory = () => {
-	uni.navigateTo({
+	uni.switchTab({
 		url: "/pages/HistoryDialoguePage/HistoryDialoguePage"
 	})
 }
@@ -134,7 +134,7 @@ const navConsolid = () => {
 	})
 }
 const navMinePage = () => {
-	uni.navigateTo({
+	uni.switchTab({
 		url: "/pages/MinePage/MinePage"
 	})
 }

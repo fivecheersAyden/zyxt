@@ -45,7 +45,7 @@
 											scene.name }}</view>
 										<view v-if="currentSelectedIndex == index" class="tag">当前选择</view>
 									</view>
-									<view style="font-size: 14px; color: #666;">{{ scene.description }}</view>
+									<view style="font-size: 14px; color: #bbb;">{{ scene.description }}</view>
 								</view>
 
 							</view>
@@ -262,14 +262,22 @@ const saveBtn = () => {
 
 
 .picker-custom {
-	margin-top: 5px;
+	margin-top: 15px;
 	border-radius: 10px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.308);
 	box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.1);
 }
 
 :deep(.wd-picker__cell) {
 	background-color: inherit !important;
+}
+
+:deep(.wd-picker__label) {
+	color: white !important;
+	font-weight: bold;
+}
+:deep(.wd-picker__value) {
+	color: white !important;
 }
 
 .custom-ai-container {

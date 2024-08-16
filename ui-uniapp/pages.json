@@ -147,10 +147,10 @@
 		}
 	],
 	"tabBar": {
-		"height": "0",
+		"height": "1px",
 		"list": [
 			{
-				"pagePath": "pages/QuesPageBefore/QuesPageBefore",
+				"pagePath": "pages/HistoryDialoguePage/HistoryDialoguePage",
 				"text": ""
 			},
 			{

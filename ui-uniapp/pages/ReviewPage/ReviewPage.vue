@@ -32,7 +32,7 @@
 			<!--复习记录-->
 			<div class="body-content">
 				<!--标题-->
-				<wd-divider style="margin-bottom: 4px;">复习记录</wd-divider>
+				<wd-divider color="#bbb" style="margin-bottom: 4px;">复习记录</wd-divider>
 				<!--选择器-->
 				<div class="select-container">
 					<div @click="changeTimeSelect" class="time-select" v-if="latest">排序<wd-icon name="arrow-thin-down" size="13px"></wd-icon></div>
