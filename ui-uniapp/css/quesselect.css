@@ -1,0 +1,36 @@
+	.time-select{
+		margin-left: 4px;
+		display: flex;
+		align-items: center;
+	}
+	.time-select :deep(.wd-icon){
+		margin-left: 2px;
+	}
+	.picker-container{
+		width: 140px;
+		border-radius: 12px;
+		padding: 6px 12px;
+		background-color: #ffffff33;
+	}
+	.picker-container :deep(.wd-select-picker__cell){
+		background-color: transparent !important;
+		color: white !important;
+		padding: 0 !important;
+	}
+	.picker-container :deep(.wd-select-picker__label){
+		color: #fff !important;
+		margin: 0 !important;
+	}
+	.picker-container :deep(.wd-select-picker__value){
+		color: #fff !important;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 60px;
+		margin-right: 16px !important;
+	}
+	.picker-container :deep(.wd-icon){
+		color: #fff !important;
+	}
+	
+	

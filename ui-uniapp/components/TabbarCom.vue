@@ -39,7 +39,7 @@
 				break;
 			case 1:
 				uni.switchTab({
-					url: '/pages/HistoryDialoguePage/HistoryDialoguePage'
+					url: '/pages/QuesPageBefore/QuesPageBefore'
 				})
 				break;
 			case 2:

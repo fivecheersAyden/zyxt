@@ -144,13 +144,31 @@
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
-		}
+		},
+		{
+			"path" : "pages/QuesPageBefore/QuesPageBefore",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle" : "custom"
+			}
+		},
+        {
+        	"path" : "pages/QuesPage/QuesPage",
+        	"style" : 
+        	{
+        		"navigationBarTitleText" : "",
+        		"enablePullDownRefresh" : false,
+				"navigationStyle" : "custom"
+        	}
+        }
 	],
 	"tabBar": {
 		"height": "1px",
 		"list": [
 			{
-				"pagePath": "pages/HistoryDialoguePage/HistoryDialoguePage",
+				"pagePath": "pages/QuesPageBefore/QuesPageBefore",
 				"text": ""
 			},
 			{
