@@ -29,7 +29,7 @@
 				<wd-icon name="chat" color="#fff" size="22px"></wd-icon>
 			</div>
 			<div class="btn" v-else>
-				<wd-loading type="outline" size="22px" color="#4d80f0" />
+				<wd-loading type="outline" size="22px" color="#4942ad" />
 			</div>
 		</div>
 	</div>
@@ -276,7 +276,7 @@
 	.message-self .ai-head{
 		width: 36px;
 		height: 36px;
-		background-color: #4d80f0;
+		background-color: #4942ad;
 		border-radius: 8px;
 		display: flex;
 		align-items: center;
@@ -299,7 +299,7 @@
 		max-width: calc(100% - 92px);
 		margin: 4px 8px;
 		color: #fff;
-		background-color: #4d80f0;
+		background-color: #4942ad;
 		padding: 8px;
 		border-top-left-radius: 8px;
 		border-bottom-right-radius: 8px;
@@ -310,7 +310,7 @@
 	.message-self .usr-head{
 		width: 36px;
 		height: 36px;
-		background-color: #4d80f0;
+		background-color: #4942ad;
 		border-radius: 8px;
 		display: flex;
 		align-items: center;
@@ -340,7 +340,7 @@
 	.input-container .btn{
 		width: 48px;
 		height: 36px;
-		background-color: #4d80f0;
+		background-color: #4942ad;
 		border-radius: 8px;
 		display: flex;
 		align-items: center;

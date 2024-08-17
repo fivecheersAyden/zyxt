@@ -32,7 +32,7 @@
 			<!--复习记录-->
 			<div class="body-content">
 				<!--标题-->
-				<wd-divider style="margin-bottom: 4px;">复习记录</wd-divider>
+				<wd-divider color="#bbb" style="margin-bottom: 4px;">复习记录</wd-divider>
 				<!--选择器-->
 				<div class="select-container">
 					<div @click="changeTimeSelect" class="time-select" v-if="latest">排序<wd-icon name="arrow-thin-down" size="13px"></wd-icon></div>
@@ -266,7 +266,7 @@
 		font-size: 16px;
 		letter-spacing: 1px;
 		font-weight: bold;
-		color: #333;
+		color: #ffffff;
 	}
 	.review-num-container div:nth-child(2){
 		font-size: 36px;
@@ -278,7 +278,7 @@
 	.review-jump-btn{
 		width: 120px;
 		height: 60px;
-		background-color: #496cf1;
+		background-color: #4942ad;
 		color: #fff;
 		display: flex;
 		align-items: center;
@@ -331,7 +331,7 @@
 		animation: top-in-ani .6s 1;
 	}
 	.body-content .select-container .time-select{
-		color: #333;
+		/* color: #333; */
 	}
 	.body-content .scroll-container{
 		margin: 8px;

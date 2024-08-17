@@ -5,18 +5,18 @@
 		<view class="status_bar">
 			<!-- 这里是状态栏 -->
 		</view>
-		<view class="page-header-back">
-			<navigator open-type="navigateBack" hover-class="navigator-hover">
+		<view class="page-header">
+			<!-- <navigator open-type="navigateBack" hover-class="navigator-hover">
 				<view class="back-icon">
 					<wd-icon name="thin-arrow-left" size="18px"></wd-icon>
 				</view>
-			</navigator>
+			</navigator> -->
 			<view class="title">
 				我的
 			</view>
-			<view style="width: 18px">
-				<!-- placeholder for symmetry -->
-			</view>
+			<!-- <view style="width: 18px">
+				placeholder for symmetry
+			</view> -->
 		</view>
 		<!--主体-->
 		<view class="tabbarpage-body">
@@ -33,35 +33,35 @@
 			<div class="btns-container">
 				<!--使用说明-->
 				<div @click="pageJump(0)" class="option-line">
-					<wd-icon color="#222" name="help-circle" size="18px"></wd-icon>
+					<wd-icon name="help-circle" size="18px"></wd-icon>
 					<div style="width: 8px;"></div>
 					<div>使用说明</div>
 					<div style="flex: 1;"></div>
-					<wd-icon color="#222" name="arrow-right" size="22px"></wd-icon>
+					<wd-icon name="arrow-right" size="22px"></wd-icon>
 				</div>
 				<!--在线客服-->
 				<div @click="pageJump(1)" class="option-line">
-					<wd-icon color="#222" name="call" size="18px"></wd-icon>
+					<wd-icon name="call" size="18px"></wd-icon>
 					<div style="width: 8px;"></div>
 					<div>联系客服</div>
 					<div style="flex: 1;"></div>
-					<wd-icon color="#222" name="arrow-right" size="22px"></wd-icon>
+					<wd-icon name="arrow-right" size="22px"></wd-icon>
 				</div>
 				<!--问题反馈-->
 				<div @click="pageJump(2)" class="option-line">
-					<wd-icon color="#222" name="edit-1" size="18px"></wd-icon>
+					<wd-icon name="edit-1" size="18px"></wd-icon>
 					<div style="width: 8px;"></div>
 					<div>问题反馈</div>
 					<div style="flex: 1;"></div>
-					<wd-icon color="#222" name="arrow-right" size="22px"></wd-icon>
+					<wd-icon name="arrow-right" size="22px"></wd-icon>
 				</div>
 				<!--用户协议-->
 				<div @click="pageJump(3)" class="option-line">
-					<wd-icon color="#222" name="file" size="18px"></wd-icon>
+					<wd-icon name="file" size="18px"></wd-icon>
 					<div style="width: 8px;"></div>
 					<div>用户协议</div>
 					<div style="flex: 1;"></div>
-					<wd-icon color="#222" name="arrow-right" size="22px"></wd-icon>
+					<wd-icon name="arrow-right" size="22px"></wd-icon>
 				</div>
 				<!--占位-->
 				<div style="flex: 1;"></div>
@@ -69,13 +69,15 @@
 				<div class="out-btn" @click="logOut">退出登录</div>
 			</div>
 		</view>
+		<TabbarCom :tabbarIndex="4" class="tabbarpage-tabbar" />
 	</view>
 </template>
 
 <script setup>
 	import { globalProps } from '@/js/global.js'
 	import { onMounted, ref } from 'vue';
-	
+	import TabbarCom from '@/components/TabbarCom.vue'
+
 	onMounted(()=>{
 		getNickName()
 	})
@@ -184,7 +186,7 @@
 	border-top: 1px solid #4d80f022;
 	width: calc(100% - 24px);
 	flex: 1;
-	background-color: #f6f9ff;
+	background-color: #322e52;
 	animation: bottom-in-ani .6s 1;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
@@ -202,7 +204,7 @@
 	border-radius: 8px;
 	padding: 6px 12px;
 	margin: 4px 0;
-	background: linear-gradient(to right, #ffffff22, #b3c6f911);
+	background: linear-gradient(to right, #ffffff1e, #4942ad7c);
 }
 .out-btn{
 	display: flex;
@@ -214,7 +216,7 @@
 	border-radius: 8px;
 	padding: 6px 12px;
 	margin: 6px 0;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	color: #fff;
 	box-shadow: 2px 2px 4px #00000011;
 }

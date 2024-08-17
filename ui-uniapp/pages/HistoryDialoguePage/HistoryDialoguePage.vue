@@ -3,18 +3,18 @@
 		<view class="status_bar">
 			<!-- 这里是状态栏 -->
 		</view>
-		<view class="page-header-back">
-			<navigator open-type="navigateBack" hover-class="navigator-hover">
+		<view class="page-header">
+			<!-- <navigator open-type="navigateBack" hover-class="navigator-hover">
 				<view class="back-icon">
 					<wd-icon name="thin-arrow-left" size="18px"></wd-icon>
 				</view>
-			</navigator>
+			</navigator> -->
 			<view class="title">
 				历史对话
 			</view>
-			<view style="width: 18px">
-				<!-- placeholder for symmetry -->
-			</view>
+			<!-- <view style="width: 18px">
+				placeholder for symmetry
+			</view> -->
 		</view>
 		<!--主体-->
 		<view class="tabbarpage-body">
@@ -50,6 +50,7 @@
 				</div>
 			</div>
 		</view>
+		<TabbarCom :tabbarIndex="1" class="tabbarpage-tabbar" />
 	</view>
 </template>
 
@@ -57,6 +58,7 @@
 	import timestampToFormattedDateTime from '@/js/timestampToFormattedDateTime.js'
 	import { globalProps } from '@/js/global.js';
 	import { onMounted, ref } from 'vue';
+	import TabbarCom from '@/components/TabbarCom.vue';
 	
 	//当前习题
 	const currentQuesList = ref([])
@@ -250,7 +252,7 @@
 		animation: top-in-ani .6s 1;
 	}
 	.body-content .select-container .time-select{
-		color: #333;
+		/* color: #333; */
 	}
 	.body-content .scroll-container{
 		margin: 8px;

@@ -626,7 +626,7 @@ onUnmounted(()=>{
 .message-self .ai-head {
 	width: 36px;
 	height: 36px;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
@@ -653,7 +653,7 @@ onUnmounted(()=>{
 	max-width: calc(100% - 92px);
 	margin: 4px 8px;
 	color: #fff;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.1);
 	padding: 8px;
 	border-top-left-radius: 8px;
@@ -666,7 +666,7 @@ onUnmounted(()=>{
 .message-self .usr-head {
 	width: 36px;
 	height: 36px;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
@@ -699,7 +699,7 @@ onUnmounted(()=>{
 .input-container .btn {
 	width: 48px;
 	height: 36px;
-	background-color: #4d80f0;
+	background-color: #4942ad;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
@@ -716,8 +716,7 @@ onUnmounted(()=>{
 }
 
 .component {
-	background: rgb(230, 252, 255);
-	background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+	background: linear-gradient(90deg, rgba(48,26,133,1) 0%, rgba(25,13,69,1) 100%);
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 	width: calc(100%);
 	margin: 10px 0 0 0;

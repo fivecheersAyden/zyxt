@@ -4,18 +4,18 @@
 			<!-- 这里是状态栏 -->
 		</view>
 		<!-- 导航栏 -->
-		<view class="page-header-back">
-			<navigator open-type="navigateBack" hover-class="navigator-hover">
+		<view class="page-header">
+			<!-- <navigator open-type="navigateBack" hover-class="navigator-hover">
 				<view class="back-icon">
 					<wd-icon name="thin-arrow-left" size="18px"></wd-icon>
 				</view>
-			</navigator>
+			</navigator> -->
 			<view class="title">
 				学情分析
 			</view>
-			<view style="width: 18px">
-				<!-- placeholder for symmetry -->
-			</view>
+			<!-- <view style="width: 18px">
+				placeholder for symmetry
+			</view> -->
 		</view>
 
 		<!--主体-->
@@ -28,6 +28,7 @@
 				<LineChartCom ref="lineRef" />
 			</view>
 		</view>
+		<TabbarCom :tabbarIndex="3" class="tabbarpage-tabbar" />
 	</view>
 </template>
 
@@ -43,6 +44,7 @@ import {
 } from '@/js/global.js'
 import LineChartCom from './components/LineChartCom.vue';
 import RadarChartEvalCom from '@/pages/GrowPage/components/RadarChartEvalCom.vue';
+import TabbarCom from '@/components/TabbarCom.vue';
 
 onBeforeMount(() => {
 	uni.hideTabBar({
@@ -212,6 +214,10 @@ const frontendFormat = (backendData) => {
 <style>
 @import "@/css/global.css";
 @import "@/css/animation.css";
+
+page{
+	color: white;
+}
 
 .growpage-container {
 	margin-top: 15px;

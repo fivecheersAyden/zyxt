@@ -12,14 +12,16 @@
 				<NewUICom class="absolute-all-container"/>
 			</view>
 		</view>
+		<TabbarCom :tabbarIndex="0" class="tabbarpage-tabbar" />
 	</view>
-
+	
 </template>
 
 <script setup>
 	import { onBeforeMount, ref } from 'vue';
 	import { globalProps } from '@/js/global.js'
 	import NewUICom from './components/NewUICom.vue';
+	import TabbarCom from '@/components/TabbarCom.vue';
 	
 
 </script>
@@ -34,6 +36,9 @@
 		right: 0;
 		bottom: 0;
 		top: 0;
+	}
+	page{
+		color: white;
 	}
 	
 	
