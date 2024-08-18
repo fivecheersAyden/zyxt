@@ -42,6 +42,7 @@ export default {
         },
         extra: {
           radar: {
+			  
             gridType: "circle",
             gridColor: "#CCCCCC",
             gridCount: 3,
@@ -49,7 +50,8 @@ export default {
             max: 10,
             labelShow: true,
             linearType: "custom",
-            border: false
+            border: false,
+			labelColor: "#FFFFFF"
           }
         }
       }

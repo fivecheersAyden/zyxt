@@ -716,7 +716,7 @@ onUnmounted(()=>{
 }
 
 .component {
-	background: linear-gradient(90deg, rgba(48,26,133,1) 0%, rgba(25,13,69,1) 100%);
+	background: linear-gradient(90deg, rgba(48,26,133,1) 0%, rgba(74, 30, 105, 1.0) 100%);
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 	width: calc(100%);
 	margin: 10px 0 0 0;

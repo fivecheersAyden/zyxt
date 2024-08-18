@@ -7,6 +7,7 @@
 		custom-class="custom-tabber" 
 		inactive-color="#a6a4b9" 
 		active-color="#ffffff"
+		style="margin: 12px 0 24px;"
 	>
 	  <wd-tabbar-item :value="messageNum[0]" title="主页" icon="home"></wd-tabbar-item>
 	  <wd-tabbar-item :value="messageNum[1]" title="错题" icon="list"></wd-tabbar-item>
@@ -39,7 +40,7 @@
 				break;
 			case 1:
 				uni.switchTab({
-					url: '/pages/QuesPageBefore/QuesPageBefore'
+					url: '/pages/HistoryDialoguePage/HistoryDialoguePage'
 				})
 				break;
 			case 2:
