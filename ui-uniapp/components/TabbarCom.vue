@@ -46,7 +46,7 @@
 			case 2:
 				currentOCR.backToNewQues = true
 				uni.navigateTo({
-					url: '/pages/newques/CameraPage/CameraPage'
+					url: '/pages/NewQuesPage/NewQuesPage'
 				})
 				break;
 			case 3:

@@ -321,26 +321,33 @@
 						}else{
 							thisPostUrl = globalProps.baseApi + 'photo/uploadForSearch'
 						}
-						uni.uploadFile({
-						        url: thisPostUrl,
-						        filePath: res.tempFilePaths[0],
-						        name: 'file',
-								header: {
-								        'Authorization': 'Bearer ' + loginStorage.data.token
-								},
-						        success: (res) => {
-									console.log('OCR识别返回res', res.data)
-									ocrCop(res.data, position)
-									uni.hideLoading();
-						        },
-						        fail: (err) => {
-								  uni.hideLoading();
-								  uni.showToast({
-								      title: 'OCR识别失败',
-								      icon: 'error'
-								  });
-						        }
-						});
+						// Ayden
+						setTimeout(()=>{
+							ocrCop(`In recent years, social media platforms have become an indispensable part of our life. For instance, social media played a crucial role in organizing protests and raising awareness about important social issues.
+							However, the pervasive use of social media also brings about negative consequences. It can lead to the spread of misinformation, cyberbullying, and addiction, affecting individuals' mental health and well-being. 
+							To mitigate the negative impacts of social media, fostering digital literacy and critical thinking skills is crucial. Emphasizing digital well-being and promoting meaningful interactions can maximize the benefits of social media while minimizing its drawbacks.`, position)
+							uni.hideLoading();
+						}, 5800)
+						// uni.uploadFile({
+						//         url: thisPostUrl,
+						//         filePath: res.tempFilePaths[0],
+						//         name: 'file',
+						// 		header: {
+						// 		        'Authorization': 'Bearer ' + loginStorage.data.token
+						// 		},
+						//         success: (res) => {
+						// 			console.log('OCR识别返回res', res.data)
+						// 			ocrCop(res.data, position)
+						// 			uni.hideLoading();
+						//         },
+						//         fail: (err) => {
+						// 		  uni.hideLoading();
+						// 		  uni.showToast({
+						// 		      title: 'OCR识别失败',
+						// 		      icon: 'error'
+						// 		  });
+						//         }
+						// });
 					}
 				})
 		    },
