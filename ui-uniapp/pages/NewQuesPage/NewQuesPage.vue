@@ -252,6 +252,7 @@ const saveDialogue = ()=>{
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	padding-bottom: 24px;
 }
 /*对话*/
 .dialogue-container{
@@ -285,6 +286,7 @@ const saveDialogue = ()=>{
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
 	position: relative;
+	font-size: 16px;
 }
 .ques-container-hide{
 	height: 24px;
@@ -297,6 +299,7 @@ const saveDialogue = ()=>{
 	padding-top: 4px;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
+	font-size: 16px;
 }
 .ques-line-container{
 	flex: 1;

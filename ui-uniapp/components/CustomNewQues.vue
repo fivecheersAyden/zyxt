@@ -137,7 +137,7 @@
 						<!--智能分析-->
 						<div class="ques-line" v-if="mode > 0">
 							<div class="h1">智能分析：</div>
-							<p>{{customNewQues.aiComment}}</p>
+							<p id="ai-comment">{{customNewQues.aiComment}}</p>
 						</div>
 					</div>
 				</div>
@@ -154,6 +154,8 @@
 	import { globalProps } from '../js/global';
 	import XuanzeCard from '@/components/XuanzeCard.vue'
 	import socket from 'plus-websocket'
+	import Vditor from 'vditor'
+	import 'vditor/dist/index.css'
 	
 	const newQuesContainer = ref()
 	const addXuanze = ()=>{
@@ -392,7 +394,7 @@
 		if (!connected.value) {
 			//连接ws
 			aiConversation = socket.connectSocket({
-				url: 'ws://aiana.yym-free.com',
+				url: 'http://www.fivecheers.com:1020',
 				success: function () {
 					connected.value = true
 				},
@@ -422,8 +424,9 @@
 			//收到消息
 			aiConversation.onMessage((res)=>{
 				if(res.data === '2580') return
-				if(res.data === 'None') {
+				if(res.data === 'DONE') {
 					aiAnalysising.value = false
+					Vditor.preview(document.getElementById('ai-comment'), customNewQues.value.aiComment)
 					return
 				}
 				customNewQues.value.aiComment += res.data

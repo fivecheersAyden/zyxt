@@ -3,6 +3,7 @@
     "base64-js": "^1.5.1",
     "buffer": "^6.0.3",
     "crypto-js": "^4.2.0",
-    "plus-websocket": "^1.0.7"
+    "plus-websocket": "^1.0.7",
+    "vditor": "^3.10.5"
   }
 }
