@@ -57,7 +57,7 @@ import AliyunTTS from '@/components/AliyunTTS.vue'
 // ws信息
 const messages = ref([]) // 当前消息队列
 const wsConnected = ref(false) // WebSocket是否已连接
-const socketUrl = 'ws://8769.yym-free.com' // WebSocket地址
+const socketUrl = 'ws://www.fivecheers.com:1022' // WebSocket地址
 // const socketUrl = 'ws://192.168.51.190:8769' // WebSocket地址
 const socket = ref(null) // WebSocket实例
 const reconnectInterval = 3000 // 重连间隔
