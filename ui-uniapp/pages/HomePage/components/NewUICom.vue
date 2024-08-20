@@ -23,18 +23,23 @@
 						<wd-icon name="chat" size="16px"></wd-icon>
 						<div>个性AI</div>
 					</div>
+					<!--历史错题-->
+					<div @click="navHistory" class="entry">
+						<wd-icon name="history" size="16px"></wd-icon>
+						<div>历史错题</div>
+					</div>
 					<!--新建讨论-->
-					<div class="entry" @click="navNewQues">
+					<!-- <div class="entry" @click="navNewQues">
 						<wd-icon name="add-circle1" size="16px"></wd-icon>
 						<div>新建讨论</div>
-					</div>
+					</div> -->
 					<!--学情分析-->
-					<div class="entry" @click="navGrowPage">
+					<!-- <div class="entry" @click="navGrowPage">
 						<wd-icon name="chart" size="16px"></wd-icon>
 						<div>学情分析</div>
-					</div>
+					</div> -->
 					<!--习题推荐-->
-					<div @click="navRecommand" :class="strMode? 'entry-hide' : 'entry'">
+					<div @click="navRecommand" class="entry">
 						<wd-icon name="tips" size="16px"></wd-icon>
 						<div>习题推荐</div>
 					</div>
@@ -44,15 +49,10 @@
 						<div>温故知新</div>
 					</div>
 					<!--听力口语-->
-					<div @click="navHearSpeak" :class="strMode? 'entry-hide' : 'entry'">
+					<!-- <div @click="navHearSpeak" :class="strMode? 'entry-hide' : 'entry'">
 						<wd-icon name="service" size="16px"></wd-icon>
 						<div>口语听力</div>
-					</div>
-					<!--历史错题-->
-					<div @click="navHistory" :class="strMode? 'entry-hide' : 'entry'">
-						<wd-icon name="history" size="16px"></wd-icon>
-						<div>历史错题</div>
-					</div>
+					</div> -->
 					<!--个人中心-->
 					<div @click="navMinePage" :class="strMode? 'entry-hide' : 'entry'">
 						<wd-icon name="home" size="16px"></wd-icon>
@@ -124,7 +124,7 @@ const navGrowPage = () => {
 	})
 }
 const navHistory = () => {
-	uni.switchTab({
+	uni.navigateTo({
 		url: "/pages/HistoryDialoguePage/HistoryDialoguePage"
 	})
 }
@@ -149,7 +149,7 @@ const navCustomAi = ()=>{
 	})
 }
 const navHearSpeak = ()=>{
-	uni.navigateTo({
+	uni.switchTab({
 		url: '/pages/RealTimeTalkingPage/RealTimeTalkingEntry'
 	})
 }
@@ -273,7 +273,7 @@ const getInnerAudioContext = (url) => {
 }
 .cheer-container-str p{
 	font-size: 13px;
-	color: #a7a7a7;
+	color: #b0b2b6;
 	letter-spacing: 1px;
 	transition: .6s;
 }
@@ -290,6 +290,7 @@ const getInnerAudioContext = (url) => {
 	color: #000;
 }
 .cheer-container-close h1{
+	color: #b0b2b6;
 	height: 0;
 	font-size: 0;
 	letter-spacing: 1px;
@@ -308,7 +309,7 @@ const getInnerAudioContext = (url) => {
 .cheer-container-close h2{
 	font-size: 13px;
 	transition: .6s;
-	color: #666;
+	color: #b0b2b6;
 	letter-spacing: 2px;
 	transform: translateY(8px);
 }
