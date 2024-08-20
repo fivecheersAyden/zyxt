@@ -108,9 +108,8 @@ const promptClick = (index) => {
 	promptShow.value = false
 	switch (index) {
 		case 1:
-			// textSubmit.value = prompt1Text.value
-			addNewMsg('mode1', prompt1Text.value)
-			showLoading.value = true
+			textSubmit.value = prompt1Text.value
+			submitButtonClick()
 			break
 		case 2:
 			// textSubmit.value = prompt2Text.value
@@ -126,7 +125,7 @@ const promptClick = (index) => {
 			break
 		case 4:
 			// textSubmit.value = prompt4Text.value
-			addNewMsg('mode4', prompt4Text.value)
+			addNewMsg('mode1', prompt4Text.value)
 			showRecommend.value = true
 			showLoading.value = true
 			break
@@ -155,7 +154,7 @@ const connected = ref(false)
 // WebSocket连接部分
 
 // let socketUrl = 'ws://aitalk.yym-free.com?userId=' + globalProps.userInfo.id;
-let socketUrl = 'ws://www.fivecheers.com:1021';
+let socketUrl = 'ws://www.fivecheers.com:1021?userId=' + globalProps.userInfo.id;
 // let socketUrl = 'ws://192.168.149.190:8765';
 
 let socket = null;

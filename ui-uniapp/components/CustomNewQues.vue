@@ -154,8 +154,6 @@
 	import { globalProps } from '../js/global';
 	import XuanzeCard from '@/components/XuanzeCard.vue'
 	import socket from 'plus-websocket'
-	import Vditor from 'vditor'
-	import 'vditor/dist/index.css'
 	
 	const newQuesContainer = ref()
 	const addXuanze = ()=>{
@@ -427,7 +425,6 @@
 				if(res.data === '2580') return
 				if(res.data === 'DONE') {
 					aiAnalysising.value = false
-					Vditor.preview(document.getElementById('ai-comment'), customNewQues.value.aiComment)
 					return
 				}
 				customNewQues.value.aiComment += res.data
