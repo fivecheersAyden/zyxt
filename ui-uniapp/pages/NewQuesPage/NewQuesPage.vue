@@ -138,7 +138,7 @@ const ocrAnalysis = (imagePath, tmpFileSize)=>{
 		success(loginStorage) {
 			console.log('token=' + loginStorage.data.token)
 			//Ayden
-			if(Number(tmpFileSize) >= 109000 && Number(tmpFileSize) <= 110000){
+			if(Number(tmpFileSize) >= 90000){
 				setTimeout(()=>{
 					quesDialogue.value.cuoTiJi = yueduOCR
 					customNewQues.value.updateCustomNewQues(yueduOCR)

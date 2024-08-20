@@ -324,12 +324,13 @@
 							thisPostUrl = globalProps.baseApi + 'photo/uploadForSearch'
 						}
 						// Ayden
-						// setTimeout(()=>{
-						// 	ocrCop(`In recent years, social media platforms have become an indispensable part of our life. For instance, social media played a crucial role in organizing protests and raising awareness about important social issues.
-						// 	However, the pervasive use of social media also brings about negative consequences. It can lead to the spread of misinformation, cyberbullying, and addiction, affecting individuals' mental health and well-being. 
-						// 	To mitigate the negative impacts of social media, fostering digital literacy and critical thinking skills is crucial. Emphasizing digital well-being and promoting meaningful interactions can maximize the benefits of social media while minimizing its drawbacks.`, position)
-						// 	uni.hideLoading();
-						// }, 5800)
+						setTimeout(()=>{
+							ocrCop(`In recent years, social media platforms have become an indispensable part of our life. For instance, social media played a crucial role in organizing protests and raising awareness about important social issues.
+							However, the pervasive use of social media also brings about negative consequences. It can lead to the spread of misinformation, cyberbullying, and addiction, affecting individuals' mental health and well-being. 
+							To mitigate the negative impacts of social media, fostering digital literacy and critical thinking skills is crucial. Emphasizing digital well-being and promoting meaningful interactions can maximize the benefits of social media while minimizing its drawbacks.`, position)
+							uni.hideLoading();
+						}, 5800)
+						return
 						uni.uploadFile({
 						        url: 'http://www.fivecheers.com:1038/upload',
 						        filePath: res.tempFilePaths[0],
