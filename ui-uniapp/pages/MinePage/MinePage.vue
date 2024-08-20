@@ -186,7 +186,6 @@
 	border-top: 1px solid #4d80f022;
 	width: calc(100% - 24px);
 	flex: 1;
-	background-color: #322e52;
 	animation: bottom-in-ani .6s 1;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
@@ -200,11 +199,11 @@
 	justify-content: space-between;
 	height: 40px;
 	letter-spacing: 2px;
-	border: #ddd 1px solid;
+	border: #eeeeee88 1px solid;
 	border-radius: 8px;
 	padding: 6px 12px;
 	margin: 4px 0;
-	background: linear-gradient(to right, #ffffff1e, #4942ad7c);
+	background: linear-gradient(to right, #ffffff1e, #472c977d);
 }
 .out-btn{
 	display: flex;
@@ -212,11 +211,11 @@
 	justify-content: center;
 	height: 32px;
 	letter-spacing: 2px;
-	border: #ddd 1px solid;
+	border: #eeeeee88 1px solid;
 	border-radius: 8px;
 	padding: 6px 12px;
 	margin: 6px 0;
-	background-color: #4942ad;
+	background-color: #503aad;
 	color: #fff;
 	box-shadow: 2px 2px 4px #00000011;
 }

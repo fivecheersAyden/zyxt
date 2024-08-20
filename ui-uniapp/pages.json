@@ -21,8 +21,6 @@
 		{
 			"path": "pages/HistoryDialoguePage/HistoryDialoguePage",
 			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
 		},
@@ -168,7 +166,7 @@
 		"height": "1px",
 		"list": [
 			{
-				"pagePath": "pages/QuesPageBefore/QuesPageBefore",
+				"pagePath": "pages/HistoryDialoguePage/HistoryDialoguePage",
 				"text": ""
 			},
 			{

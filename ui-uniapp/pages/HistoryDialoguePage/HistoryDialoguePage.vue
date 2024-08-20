@@ -267,7 +267,7 @@
 		animation: bottom-in-ani .8s 1;
 	}
 	.ques-line{
-		width: calc(100% - 24px);
+		width: calc(100% - 36px);
 		margin: 4px 0;
 		border-radius: 12px;
 		color: #333;
@@ -276,7 +276,8 @@
 		white-space: nowrap;
 		justify-content: center;
 		padding: 8px 12px;
-		background-color: #fff;
+		background-color: #ffffffee;
+		backdrop-filter: blur(8px);
 		border: 1px solid #eee;
 		box-shadow: 2px 2px 6px #00000011;
 	}

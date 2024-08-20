@@ -104,7 +104,7 @@
 		if (!connected.value) {
 			//连接ws
 			aiConversation = socket.connectSocket({
-				url: 'ws://quesai.yym-free.com',
+				url: 'ws://www.fivecheers.com:1026',
 				success: function () {
 					connected.value = true
 				},
@@ -224,7 +224,7 @@
 			return
 		}
 		//最后一次回应
-		if(res.data === 'None'){
+		if(res.data === 'DONE'){
 			responsing.value = false
 			showLoading.value = false
 		}
@@ -294,6 +294,7 @@
 		border-bottom-left-radius: 8px;
 		letter-spacing: 1px;
 		white-space: pre-line;
+		font-size: 14px;
 	}
 	.message-self .usr-message{
 		max-width: calc(100% - 92px);
@@ -306,6 +307,7 @@
 		border-bottom-left-radius: 8px;
 		letter-spacing: 1px;
 		white-space: pre-line;
+		font-size: 14px;
 	}
 	.message-self .usr-head{
 		width: 36px;

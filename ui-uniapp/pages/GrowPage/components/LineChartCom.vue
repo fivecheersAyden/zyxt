@@ -47,11 +47,13 @@ export default {
           show: false
         },
         xAxis: {
-          disableGrid: true
+          disableGrid: true,
+		  fontColor: "#FFFFFF"
         },
         yAxis: {
           gridType: "dash",
           dashLength: 2,
+		  fontColor: "#FFFFFF",
           data: [
             {
               min: 0,

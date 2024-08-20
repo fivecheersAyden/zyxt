@@ -16,6 +16,11 @@
             "autoclose" : true,
             "delay" : 0
         },
+		"safearea":{
+			"bottom": {
+				"offset": "none"
+			}
+		},
         /* 模块配置 */
         "modules" : {
             "Speech" : {},

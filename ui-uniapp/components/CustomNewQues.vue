@@ -137,7 +137,7 @@
 						<!--智能分析-->
 						<div class="ques-line" v-if="mode > 0">
 							<div class="h1">智能分析：</div>
-							<p>{{customNewQues.aiComment}}</p>
+							<p id="ai-comment">{{customNewQues.aiComment}}</p>
 						</div>
 					</div>
 				</div>
@@ -154,6 +154,8 @@
 	import { globalProps } from '../js/global';
 	import XuanzeCard from '@/components/XuanzeCard.vue'
 	import socket from 'plus-websocket'
+	import Vditor from 'vditor'
+	import 'vditor/dist/index.css'
 	
 	const newQuesContainer = ref()
 	const addXuanze = ()=>{
@@ -321,8 +323,15 @@
 						}else{
 							thisPostUrl = globalProps.baseApi + 'photo/uploadForSearch'
 						}
+						// Ayden
+						// setTimeout(()=>{
+						// 	ocrCop(`In recent years, social media platforms have become an indispensable part of our life. For instance, social media played a crucial role in organizing protests and raising awareness about important social issues.
+						// 	However, the pervasive use of social media also brings about negative consequences. It can lead to the spread of misinformation, cyberbullying, and addiction, affecting individuals' mental health and well-being. 
+						// 	To mitigate the negative impacts of social media, fostering digital literacy and critical thinking skills is crucial. Emphasizing digital well-being and promoting meaningful interactions can maximize the benefits of social media while minimizing its drawbacks.`, position)
+						// 	uni.hideLoading();
+						// }, 5800)
 						uni.uploadFile({
-						        url: thisPostUrl,
+						        url: 'http://www.fivecheers.com:1038/upload',
 						        filePath: res.tempFilePaths[0],
 						        name: 'file',
 								header: {
@@ -385,7 +394,7 @@
 		if (!connected.value) {
 			//连接ws
 			aiConversation = socket.connectSocket({
-				url: 'ws://aiana.yym-free.com',
+				url: 'http://www.fivecheers.com:1020',
 				success: function () {
 					connected.value = true
 				},
@@ -415,8 +424,9 @@
 			//收到消息
 			aiConversation.onMessage((res)=>{
 				if(res.data === '2580') return
-				if(res.data === 'None') {
+				if(res.data === 'DONE') {
 					aiAnalysising.value = false
+					Vditor.preview(document.getElementById('ai-comment'), customNewQues.value.aiComment)
 					return
 				}
 				customNewQues.value.aiComment += res.data

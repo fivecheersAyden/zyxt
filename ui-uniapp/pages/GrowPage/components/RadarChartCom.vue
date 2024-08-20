@@ -58,7 +58,8 @@ export default {
             max: 1,
             labelShow: true,
             linearType: "custom",
-            border: false
+            border: false,
+			labelColor: "#FFFFFF"
           }
         }
       }

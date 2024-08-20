@@ -10,7 +10,7 @@
 		<view class="tabbarpage-body">
 			<!--LOGO-->
 			<div class="logo-container">
-				<image mode="aspectFit" src="@/static/logo.png" alt="" />
+				<image mode="aspectFit" src="@/static/logo_white.png" alt="" />
 				<h1>智悦学途</h1>
 				<h3>您的智能英语教辅</h3>
 			</div>
@@ -84,9 +84,17 @@
 				<!--其他登陆方式-->
 				<wd-divider style="color:white; width: 100%; margin: 12px 0;">其他方式登录</wd-divider>
 				<div class="other-container">
-					<image @click="otherLogin(1)" mode="aspectFit" src="@/static/icon_QQ.png" alt="" />
-					<image @click="otherLogin(2)" mode="aspectFit" src="@/static/icon_weichat.png" alt="" />
-					<image @click="otherLogin(3)" mode="aspectFit" src="@/static/icon_zhifubao.png" alt="" />
+					<div>
+						<image @click="otherLogin(1)" mode="aspectFit" src="@/static/icon_QQ.png" alt="" />
+					</div>
+					<div>
+						<image @click="otherLogin(2)" mode="aspectFit" src="@/static/icon_weichat.png" alt="" />
+					</div>
+					<div>
+						<image @click="otherLogin(3)" mode="aspectFit" src="@/static/icon_zhifubao.png" alt="" />
+					</div>
+					
+					
 				</div>
 			</div>
 			<!--使用问题-->
@@ -242,7 +250,7 @@
 							  cancelColor: '#007aff',
 							  success(res) {
 							  	if(res.confirm){
-									plus.runtime.openURL('https://www.yym-free.com/resource/default/zip/fb529fec-c942-48e4-9206-9b36d118aede.zip')
+									plus.runtime.openURL('http://www.fivecheers.com/resource/blog/zip/92ac1cf2-874c-43aa-bb81-b4cdff881633.zip')
 									/* uni.setClipboardData({
 									        data: 'https://www.yym-free.com/resource/default/zip/fb529fec-c942-48e4-9206-9b36d118aede.zip',
 									        success() {
@@ -303,7 +311,7 @@
 	animation: bottom-in-ani 1s 1;
 }
 .logo-container h1{
-	color: #496cf1ff;
+	color: #fff;
 	letter-spacing: 6px;
 	font-weight: bold;
 	font-size: 40px;
@@ -313,7 +321,7 @@
 }
 .logo-container h3{
 	font-size: 14px;
-	color: #496cf1;
+	color: #fff;
 	letter-spacing: 2px;
 	animation: text-ani 1s 1;
 	white-space: nowrap;
@@ -330,7 +338,8 @@
 }
 .form-body{
 	padding: 20px 12px;
-	background-color: #fff;
+	background-color: #ffffff;
+	backdrop-filter: blur(8px);
 	border-radius: 8px;
 	box-shadow: 2px 2px 8px #00000011;
 }
@@ -353,6 +362,12 @@
 	flex-direction: row;
 	position: relative;
 }
+.other-container div{
+	height: 40px;
+	width: 40px;
+	background-color: #fff;
+	border-radius: 999px;
+}
 .other-container image{
 	height: 100%;
 }
@@ -370,7 +385,7 @@
 .problem-container p{
 	font-size: 14px;
 	text-decoration: underline;
-	color: #666;
+	color: #ddd;
 }
 :deep(.uni-modal__bd){
 	text-align: left !important;
