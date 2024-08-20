@@ -103,25 +103,38 @@ const prompt3 = ref('学情分析')
 const prompt3Text = ref('请您分析下我最近的学习情况')
 const prompt4 = ref('习题推荐')
 const prompt4Text = ref('请根据我的学习情况给我推荐一些习题')
+
 const promptClick = (index) => {
+	promptShow.value = false
 	switch (index) {
 		case 1:
-			textSubmit.value = prompt1Text.value
+			// textSubmit.value = prompt1Text.value
+			addNewMsg('mode1', prompt1Text.value)
+			showLoading.value = true
 			break
 		case 2:
-			textSubmit.value = prompt2Text.value
+			// textSubmit.value = prompt2Text.value
+			addNewMsg('mode2', prompt2Text.value)
+			showConsoliButton.value = true
+			showLoading.value = true
 			break
 		case 3:
-			textSubmit.value = prompt3Text.value
+			// textSubmit.value = prompt3Text.value
+			addNewMsg('mode3', prompt3Text.value)
+			showAnalysis.value = true
+			showLoading.value = true
 			break
 		case 4:
-			textSubmit.value = prompt4Text.value
+			// textSubmit.value = prompt4Text.value
+			addNewMsg('mode4', prompt4Text.value)
+			showRecommend.value = true
+			showLoading.value = true
 			break
 	}
-	setTimeout(() => {
-		submitButtonClick()
-		promptShow.value = false
-	}, 200)
+	// setTimeout(() => {
+	// 	submitButtonClick()
+	// 	promptShow.value = false
+	// }, 200)
 }
 
 onHide(() => {
@@ -141,7 +154,8 @@ const connected = ref(false)
 
 // WebSocket连接部分
 
-let socketUrl = 'ws://aitalk.yym-free.com?userId=' + globalProps.userInfo.id;
+// let socketUrl = 'ws://aitalk.yym-free.com?userId=' + globalProps.userInfo.id;
+let socketUrl = 'ws://www.fivecheers.com:1021';
 // let socketUrl = 'ws://192.168.149.190:8765';
 
 let socket = null;
@@ -299,6 +313,18 @@ const addUsrMsg = () => {
 	scrollToBottom()
 }
 
+const addNewMsg = (mode, content) => {
+	socket.send({
+		data: mode
+	});
+	messages.value.push({
+		type: 'usr',
+		content: content
+	})
+	textSubmit.value = ''
+	scrollToBottom()
+}
+
 const waitingForJump = ref(false)
 const showLoading = ref(false)
 
@@ -372,22 +398,22 @@ const addAiMsg = (res) => {
 
 
 	//最后一次回应
-	if (res.data === 'None') {
+	if (res.data === 'DONE') {
 		responsing.value = false
 		// emit('onlyStop')
 		showLoading.value = false
 		// 如果7410，则显示按钮
-		if (showConsoliButton.value) {
+		if (showConsoliButton.value) { // 这几个需要修改到点击按钮时触发，而不是根据第一个消息code
 			messages.value[messages.value.length - 1].msgShowConsoliButton = true;
-			showConsoliButton.value = false
+			showConsoliButton.value = false 
 		}
 		// 如果2580，则显示按钮
-		if (showRecommend.value) {
+		if (showRecommend.value) { // 这几个需要修改到点击按钮时触发，而不是根据第一个消息code
 			messages.value[messages.value.length - 1].msgShowRecommend = true;
 			showRecommend.value = false
 		}
 		// 如果1234，则显示按钮
-		if (showAnalysis.value) {
+		if (showAnalysis.value) { // 这几个需要修改到点击按钮时触发，而不是根据第一个消息code
 			messages.value[messages.value.length - 1].msgShowAnalysis = true;
 			showAnalysis.value = false
 		}
