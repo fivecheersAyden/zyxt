@@ -127,11 +127,25 @@ export default {
 							that.innerAudioContext = uni.createInnerAudioContext();
 							let encodeText = encodeURIComponent(sentence)
 							console.log('音频播放源','https://nls-gateway-cn-shanghai.aliyuncs.com/stream/v1/tts?appkey=' + that.myAppkey + '&speech_rate=' + that.speech_rate + '&voice=' + that.voice + '&token=' + res.data + '&text=' + encodeText + `&format=wav&sample_rate=16000`)
-							that.innerAudioContext.src = 'https://nls-gateway-cn-shanghai.aliyuncs.com/stream/v1/tts?appkey=' + that.myAppkey + '&speech_rate=' + that.speech_rate + '&voice=' + that.voice + '&token=' + res.data + '&text=' + encodeText + `&format=wav&sample_rate=16000`;
-							that.innerAudioContext.play();
-							that.innerAudioContext.onEnded(() => {
-							    that.playNext();
+							uni.downloadFile({
+							  url: 'https://nls-gateway-cn-shanghai.aliyuncs.com/stream/v1/tts?appkey=' + that.myAppkey + '&speech_rate=' + that.speech_rate + '&voice=' + that.voice + '&token=' + res.data + '&text=' + encodeText + `&format=wav&sample_rate=16000`,
+							  success: (res) => {
+							    if (res.statusCode === 200) {
+							      that.innerAudioContext.src = res.tempFilePath
+								  that.innerAudioContext.play();
+								  that.innerAudioContext.onEnded(() => {
+								      that.playNext();
+								  });
+							    } else {
+							      console.error('文件下载失败，状态码：', res.statusCode);
+							    }
+							  },
+							  fail: (err) => {
+							    console.error('文件下载失败：', err);
+							  }
 							});
+							// that.innerAudioContext.src = 'https://nls-gateway-cn-shanghai.aliyuncs.com/stream/v1/tts?appkey=' + that.myAppkey + '&speech_rate=' + that.speech_rate + '&voice=' + that.voice + '&token=' + res.data + '&text=' + encodeText + `&format=wav&sample_rate=16000`;
+							
 						}
 						
 					}
