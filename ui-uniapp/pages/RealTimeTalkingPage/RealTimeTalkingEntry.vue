@@ -4,18 +4,19 @@
 			<!-- 这里是状态栏 -->
 		</view>
 		<!-- 导航栏 -->
-		<view class="page-header-back">
-			<navigator open-type="navigateBack" hover-class="navigator-hover">
+		<view class="page-header">
+			<!-- <navigator open-type="navigateBack" hover-class="navigator-hover">
 				<view class="back-icon">
 					<wd-icon name="thin-arrow-left" size="18px"></wd-icon>
 				</view>
-			</navigator>
+			</navigator> -->
 			<view class="title">
 				口语听力
 			</view>
-			<view style="width: 18px">
-				<!-- placeholder for symmetry -->
-			</view>
+			
+			<!-- <view style="width: 18px">
+				placeholder for symmetry
+			</view> -->
 		</view>
 
 		<!--主体-->
@@ -94,11 +95,11 @@
 							</view>
 						</CardCom>
 					</view>
-
 					<button class="choose-btn" @click="saveBtn">保存练习记录</button>
 				</view>
 			</view>
 		</view>
+		<TabbarCom :tabbarIndex="1" class="tabbarpage-tabbar" />
 	</view>
 </template>
 
@@ -107,6 +108,7 @@ import { globalProps } from '@/js/global.js'
 import { ref, onMounted, onUnmounted } from 'vue'
 import AiConversationCom from '@/components/AiConversationCom.vue';
 import CardCom from '@/components/CardCom.vue';
+import TabbarCom from '@/components/TabbarCom.vue';
 
 /**
  * 全局

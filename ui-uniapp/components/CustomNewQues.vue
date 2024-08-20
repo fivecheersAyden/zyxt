@@ -551,6 +551,7 @@
 		padding: 8px;
 		z-index: 0;
 		white-space: pre-line;
+		font-family: 'Courier New', Courier, monospace;
 	}
 	.h1{
 		font-weight: bold;

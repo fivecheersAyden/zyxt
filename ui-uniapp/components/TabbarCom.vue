@@ -10,7 +10,7 @@
 		style="margin: 12px 0 24px;"
 	>
 	  <wd-tabbar-item :value="messageNum[0]" title="主页" icon="home"></wd-tabbar-item>
-	  <wd-tabbar-item :value="messageNum[1]" title="错题" icon="list"></wd-tabbar-item>
+	  <wd-tabbar-item :value="messageNum[1]" title="口语" icon="service"></wd-tabbar-item>
 	  <wd-tabbar-item icon="cart" title="">
 	      <template #icon>
 	        <wd-img round height="58px" width="58px" src="https://www.yym-free.com/resource/default/png/28ebbe52-773c-4230-a9db-6648a9115ab2.png"></wd-img>
@@ -40,7 +40,7 @@
 				break;
 			case 1:
 				uni.switchTab({
-					url: '/pages/HistoryDialoguePage/HistoryDialoguePage'
+					url: '/pages/RealTimeTalkingPage/RealTimeTalkingEntry'
 				})
 				break;
 			case 2:
