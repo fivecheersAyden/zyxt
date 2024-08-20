@@ -5,6 +5,19 @@ import websockets
 import urllib.parse
 import json
 import requests
+import re
+
+def split_string(text):
+    # 定义标点符号列表
+    punctuation = ['。', '：', '，', '！', '？', ',', '!', '?', ':', '.']
+
+    # 使用正则表达式将字符串按标点符号拆分，并保留标点符号
+    split_result = re.split(r'([。：，！？,!?:.])', text)
+
+    # 去除空字符串
+    result = [part for part in split_result if part]
+
+    return result
 
 def call_llm(prompt):
     # client = OpenAI(
@@ -87,7 +100,7 @@ tip_prompt = """
 （1）注意，你返回的提示应该合乎现实中的对话逻辑，即你返回的提示应当是合理的，如果用户采用了你的提示，其形成的对话，应当是一个日常正常的对话。
 （2）你只需要返回提示即可，不可以返回提示以外的任何话
 （3）你的提示应该是应该是一个引导，而不是一个问题
-（4）返回的提示应当是中文
+（4）返回的提示应当是中文，注意不要返回英文 !重要注意不要返回英文 !重要注意不要返回英文 !重要
 返回的示例：
 （1）可以详细描述一下你想要去的南海滩是在哪个城镇或城市。
 （2）可以介绍一下你的爱好。
@@ -133,7 +146,7 @@ async def echo(websocket, path):
             print(system_prompt)
             print("====================system_prompt====================")
             system_input = {
-                "role": "system",
+                "role": "assistant",
                 "content": system_prompt
             }
 
@@ -163,31 +176,39 @@ async def echo(websocket, path):
             # history_chat.append(user_input)
             print(history_chat)
             url = "https://spark-api-open.xf-yun.com/v1/chat/completions"
-            data = history_chat
+            data = {
+                "model": "generalv3.5",
+                "messages": history_chat,
+                "stream": True
+            }
             header = {
                 "Authorization": "Bearer e7fc4e9b8b7702173a8d0d04e758bca8:Y2YzMTE1Y2FmNTY1YTMxYzJmM2M4ZGQ2"  # 注意此处替换自己的key和secret
             }
             response = requests.post(url, headers=header, json=data, stream=True)
-            # response = client.chat.completions.create(
-            #     model="gpt-3.5-turbo",
-            #     messages=history_chat,
-            #     stream=True
-            # )
             collected_chunks = []
             collected_messages = []
             reply = ""
-            for chunk in response:
-                content = str(chunk.choices[0].delta.content)
-                send_message = f'{{"type":"chat","content":"{content}"}}'
-                print(send_message)
-                # send_message = {
-                #     "type": "chat",
-                #     "content": content
-                # }
-                if content != "None":
-                    reply = reply + str(content)
-                await websocket.send(str(send_message))
-                await asyncio.sleep(0.05)  # 模拟每秒发送一个数据
+            for line in response.iter_lines(decode_unicode="utf-8"):
+                if line == "data: [DONE]":
+                    send_message = f'{{"type":"chat","content":"None"}}'
+                    print(send_message)
+                    await websocket.send(send_message)
+                    break
+                if len(line) > 2:
+                    cleanedLine = line.replace("data:", "", 1);
+                    print('cleanedLine: ', cleanedLine)
+                    lineJson = json.loads(cleanedLine)
+                    content = lineJson["choices"][0]["delta"]["content"]
+
+                    result = split_string(content)
+                    for i in result:
+                        send_message = f'{{"type":"chat","content":"{i}"}}'
+                        print(send_message)
+                        await websocket.send(send_message)
+
+                    if content != "None":
+                        reply = reply + content
+            
             print(reply)
             ai_chat = {
                 "role": "assistant",
