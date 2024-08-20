@@ -144,6 +144,7 @@ const ocrAnalysis = (imagePath, tmpFileSize)=>{
 					customNewQues.value.updateCustomNewQues(yueduOCR)
 					uni.hideLoading()
 				}, 6200)
+				return
 			}
 			uni.uploadFile({
 			        url: 'http://www.fivecheers.com:1039/uploadQues',
