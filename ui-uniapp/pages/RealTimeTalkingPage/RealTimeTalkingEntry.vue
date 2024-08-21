@@ -52,7 +52,7 @@
 							</view>
 						</view>
 						<wd-picker custom-class="picker-custom" v-if="currentSelectedIndex == index"
-							:columns="scene.charColumns" label="你的角色" @confirm="handleConfirm" />
+							:columns="scene.charColumns" label="你的角色" @confirm="handleConfirm" @click="hideTabbar"/>
 
 					</view>
 
@@ -99,7 +99,7 @@
 				</view>
 			</view>
 		</view>
-		<TabbarCom :tabbarIndex="1" class="tabbarpage-tabbar" />
+		<TabbarCom style="z-index: 0 !important;" :tabbarIndex="1" class="tabbarpage-tabbar" />
 	</view>
 </template>
 

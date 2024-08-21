@@ -157,12 +157,12 @@ const connected = ref(false)
 let socketUrl = 'ws://www.fivecheers.com:1021?userId=' + globalProps.userInfo.id;
 // let socketUrl = 'ws://192.168.149.190:8765';
 
-let socket = null;
+let socketQues = null;
 let reconnectInterval = 3000;
 
 function connectSocket() {
 	if (isShow.value && !connected.value) {
-		socket = uni.connectSocket({
+		socketQues = uni.connectSocket({
 			url: socketUrl,
 			success: function () {
 				console.log('Socket连接成功');
@@ -179,7 +179,7 @@ function connectSocket() {
 		});
 
 		// 监听WebSocket关闭事件
-		socket.onClose(function () {
+		socketQues.onClose(function () {
 			console.log('Socket连接关闭');
 			connected.value = false
 			responsing.value = false
@@ -191,7 +191,7 @@ function connectSocket() {
 		});
 
 		// 监听WebSocket错误事件
-		socket.onError(function (err) {
+		socketQues.onError(function (err) {
 			console.error('Socket连接错误:', err);
 			connected.value = false
 			// 连接错误后进行重连
@@ -201,7 +201,7 @@ function connectSocket() {
 		});
 
 		//收到ws信息
-		socket.onMessage(function (res) {
+		socketQues.onMessage(function (res) {
 			if (isShow.value) {
 				if (res.data === '3690') return
 				addAiMsg(res)
@@ -301,7 +301,7 @@ const pushMessage = (newMessage) => {
 
 //增加用户消息
 const addUsrMsg = () => {
-	socket.send({
+	socketQues.send({
 		data: textSubmit.value
 	});
 	messages.value.push({
@@ -313,7 +313,7 @@ const addUsrMsg = () => {
 }
 
 const addNewMsg = (mode, content) => {
-	socket.send({
+	socketQues.send({
 		data: mode
 	});
 	messages.value.push({
