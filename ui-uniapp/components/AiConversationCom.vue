@@ -385,6 +385,9 @@ const addAiMsg = (res) => {
 			// emit('onlyRead')
 			return
 		} else {
+			if (res.data === 'DONE'){
+				return
+			}
 			messages.value.push({
 				type: 'ai',
 				content: res.data

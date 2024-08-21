@@ -215,6 +215,7 @@
 	const addAiMsg = (res)=>{
 		//发送后第一次收到回应
 		if(!responsing.value){
+			if (res.data === 'DONE') return
 			messages.value.push({
 				type: 'ai',
 				content: res.data

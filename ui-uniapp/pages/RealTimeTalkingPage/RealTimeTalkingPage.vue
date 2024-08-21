@@ -227,6 +227,7 @@ const addAiMsg = (res) => {
 	if (resData.type === 'chat') {
 		//发送后第一次收到正常回应
 		if (!responsing.value) {
+			if (res.data === 'DONE') return
 			messages.value.push({
 				type: 'ai',
 				content: resData.content
@@ -236,7 +237,7 @@ const addAiMsg = (res) => {
 		}
 
 		//最后一次回应
-		if (resData.content === 'None') {
+		if (resData.content === 'DONE') {
 			responsing.value = false
 		} else {
 			//过程中

@@ -68,34 +68,21 @@
 				</view>
 
 				<!-- 如果从练习页面返回 -->
-				<view v-show="!fromHomeIn">
-					<view style=" height: 400px;">
+				<view v-show="!fromHomeIn" style="height: 100%;">
+					<view v-show="backMsgAvailable" >
 						<AiConversationCom :isOralPractice="true" ref="aiConversationRef" />
+						<view style="display: flex; justify-content: space-between; width: 100%;">
+							<button class="choose-btn" @click="saveBtn">保存练习记录</button>
+							<button class="choose-btn" @click="() => fromHomeIn = true">重置</button>
+						</view>
 					</view>
-					<view style="height: calc(100vh - 580px); overflow-y: scroll;">
-						<CardCom title="评价结果">
-							<view>
-								语法词汇：7/10
-								<br>
-								您的语法使用基本准确，但有一些小的错误，例如在名词和动词的一致性方面可能会出现偶尔的错误。您的词汇量较丰富，能够使用多样的词汇来表达自己的意思，但偶尔可能会选择不太恰当的词汇。
-								<br><br>
-								内容相关：9/10
-								<br>
-								您的回答基本围绕着问题的主题展开，内容丰富，但有时候可能会偏离主题，或者没有完全回答问题。您的回答基本围绕着问题的主题展开，内容丰富，但有时候可能会偏离主题，或者没有完全回答问题。
-								<br><br>
-								具体建议：
-								<br>
-								1. 语法词汇方面，建议您多多练习，尤其是名词和动词的一致性，以及时态的使用。
-								<br>
-								2. 内容相关方面，建议您在回答问题时，先确定问题的主题，然后围绕主题展开，不要偏离主题。
-								<br>
-								3. 在回答问题时，尽量完整回答问题，不要遗漏重要的信息。
-								<br>
-								4. 在回答问题时，尽量使用多样的词汇，不要反复使用相同的词汇。
-							</view>
-						</CardCom>
-					</view>
-					<button class="choose-btn" @click="saveBtn">保存练习记录</button>
+					
+					<!-- <view v-show="!backMsgAvailable" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+						<view style="font-size: 20px; font-weight: bold; margin-bottom: 15px;">暂无练习记录</view>
+						<view style="font-size: 16px; color: #bbb;">您还没有进行过口语练习，快去体验一下吧！</view>
+						<button class="choose-btn" @click="() => fromHomeIn = true">现在体验</button>
+					</view> -->
+					
 				</view>
 			</view>
 		</view>
@@ -110,6 +97,8 @@ import AiConversationCom from '@/components/AiConversationCom.vue';
 import CardCom from '@/components/CardCom.vue';
 import TabbarCom from '@/components/TabbarCom.vue';
 
+const backMsgAvailable = ref(false)
+
 /**
  * 全局
  */
@@ -120,6 +109,7 @@ onMounted(() => {
 	uni.$on('backFromOralPractice', function (data) {
 		console.log('监听到事件来自 backFromOralPractice', data);
 		fromHomeIn.value = false;
+		backMsgAvailable.value = data.msgList.length > 0
 	})
 	select(0)
 })
@@ -315,7 +305,8 @@ const saveBtn = () => {
 }
 
 .choose-btn {
-	margin-top: 15px;
+	flex: 1;
+	margin: 15px 10px;
 	background-color: #6255f2;
 	color: #fff;
 	outline: none;
