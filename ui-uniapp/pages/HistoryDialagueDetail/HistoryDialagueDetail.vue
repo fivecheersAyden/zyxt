@@ -17,7 +17,7 @@
 			</view>
 		</view>
 		<!--主体-->
-		<view class="tabbarpage-body">
+		<view style="margin-bottom: 24px;"  class="tabbarpage-body">
 			<!--对话-->
 			<div class="dialogue-container">
 				<QuesAiConversationCom ref="quesAiConversation" :conversationType="0" class="dialogue-self"></QuesAiConversationCom>
@@ -34,10 +34,10 @@
 					<CustomNewQues :mode="0" ref="customNewQues" :customNewQues="quesDialogue.cuoTiJi"></CustomNewQues>
 				</div>
 				<!--相似-->
-				<div :class="showQues ? 'photo-btn-bottom' : 'photo-btn-top'" @click="jumpToSimilarHistory">
+				<!-- <div :class="showQues ? 'photo-btn-bottom' : 'photo-btn-top'" @click="jumpToSimilarHistory">
 					相似历史
 					<wd-icon style="margin: 2px 0 0 6px;" color="#fff" name="history" size="26px"></wd-icon>
-				</div>
+				</div> -->
 			</div>
 		</view>
 	</view>
